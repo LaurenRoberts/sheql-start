@@ -1,7 +1,6 @@
 get '/' do
-  if no_authentication?
+@foods = Food.all
+
+
     erb :"home"
-  else
-    "Hi, #{session[:name]}.  <img style='width:60px; border-radius:50%;' src='#{session[:picture]}' >"
-  end
 end
